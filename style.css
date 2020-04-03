@@ -1,0 +1,258 @@
+body {
+	 background-color:black;	 
+	 margin:0;padding:0;
+	 font-family: 'Fjalla One';
+	 user-select: none;
+	-webkit-user-select : none;
+	overflow:hidden;
+}
+#beginning{
+	position:absolute;
+	top:0;
+	width:100%;
+	height:100%;
+	background-color:teal;
+	z-index:3;
+	color:white;
+	text-align:center;
+	display:flex;
+	flex-direction:column;
+	justify-content:space-around;
+	align-items:center;
+}
+h1{
+	padding:10px;
+	border:5px dashed white;
+	width:310px;
+	font-size:1.5em;
+}
+.btnplay{
+	width:100px;
+	height:30px;
+	border:3px solid white;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	transform:skew(-15deg);
+	animation:movebtn 1s linear infinite;
+}
+@keyframes movebtn {50%{transform:skew(15deg);}}
+#finish{
+	position:absolute;
+	top:0;
+	width:100%;
+	height:100%;
+	background-color:teal;
+	z-index:3;
+	color:white;
+	text-align:center;
+	display:none;
+	flex-direction:column;
+	justify-content:space-around;
+	align-items:center;
+}
+h2{
+	padding:10px;
+	border:5px dashed white;
+	width:200px;
+	font-size:1.5em;
+}
+canvas{
+	background-color:black;
+	position:absolute;
+	z-index:1;
+}
+#infos{
+	position:absolute;
+	top:1px;
+	right:1px;
+	width:250px;
+	height:30px;
+	display:flex;
+	flex-direction:inline;
+	justify-content:space-around;
+	z-index:2;
+	color:silver;
+	font-size:1em;
+	
+}
+.info{
+	width:100%;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	border:0.5px solid silver;
+	
+}
+#infosval{
+	position:absolute;
+	top:30px;
+	right:1px;
+	width:250px;
+	height:30px;
+	display:flex;
+	flex-direction:inline;
+	justify-content:space-around;
+	z-index:2;
+	color:white;
+	font-size:0.8em;
+}
+
+#helicopter{
+	position:absolute;
+	left:5px;
+	width:100px;	
+	height:50px;
+	z-index:2;
+}
+#helicopterbody{
+	position:absolute;
+	top:10px;
+	left:50px;
+	width:50px;
+	height:30px;
+	border-radius:0 50px 30px 30px;
+	background-color:#CF0D0D;
+	overflow:hidden;
+}
+#helicopterwindow{
+	position:absolute;
+	top:0;
+	left:30px;
+	width:20px;
+	height:20px;
+	background-color:#31B2F5;
+}
+#helicopterwindow:before{
+	position:absolute;
+	content:'';
+	top:4px;
+	left:-8px;
+	width:20px;
+	height:20px;
+	border-radius:50%;
+	border:1.5px solid transparent;
+	border-right:1.5px solid rgba(255,255,255,0.5);
+	transform:rotate(-45deg);
+}
+#cross{
+	position:absolute;
+	top:10px;
+	left:10px;
+	width:12px;
+	height:2px;
+	background-color:white;
+}
+#cross:before{
+	position:absolute;
+	content:'';
+	top:0;
+	left:0;
+	width:12px;
+	height:2px;
+	transform:rotate(90deg);
+	background-color:white;
+}
+#helicoptertail{
+	position:absolute;
+	top:10px;
+	left:12px;
+	width:40px;
+	height:8px;
+	background-color:#CF0D0D;
+}
+#helicopterrotor{
+	position:absolute;
+	top:0px;
+	left:40px;
+	width:60px;
+	height:2px;
+	background-color:white;
+	border-radius:2px;
+	animation:move 0.5s linear infinite;
+}
+@keyframes move {0%{transform:rotateY(360deg);}}
+#helicopterfeet2{
+	position:absolute;
+	top:3px;
+	left:70px;
+	width:3px;
+	height:10px;
+	background-color:white;
+}
+#helicopterfeet1{
+	position:absolute;
+	top:46px;
+	left:55px;
+	width:40px;
+	height:4px;
+	border-radius:2px;
+	background-color:white;
+}
+#helicopterfeet1:before{
+	position:absolute;
+	content:'';
+	top:-7px;
+	left:12px;
+	width:3px;
+	height:10px;
+	background-color:white;
+}
+#helicopterfeet1:after{
+	position:absolute;
+	content:'';
+	top:-7px;
+	left:28px;
+	width:3px;
+	height:10px;
+	background-color:white;
+}
+#helicopterrotorback{
+	position:absolute;
+	top:12.5px;
+	left:4px;
+	width:17px;
+	height:3px;
+	background-color:white;
+	animation: move2 0.5s linear infinite;
+}
+@keyframes move2 {0%{transform:rotate(-360deg);}}
+#helicopterrotorback:before{
+	position:absolute;
+	content:'';
+	top:0;
+	left:0;
+	transform:rotate(90deg);
+	width:17px;
+	height:3px;
+	background-color:white;
+}
+#commandes{
+	position:absolute;
+	bottom:0;
+	width:100%;
+	display:flex;
+	flex-direction:inline;
+	justify-content:space-around;
+	align-items:center;
+	color:white;
+	 z-index:2;
+}
+.btn{
+	width:100%;
+	height:50px;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	box-shadow:inset 0 -2px 3px black,inset 0 2px 3px black;
+}
+.down{
+	background-color:#CF0D0D;
+}
+.shoot{
+	background-color:#fff;
+	color:black;
+}
+.up{
+	background-color:#1F24DC;
+}

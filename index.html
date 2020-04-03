@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Helicopter-Kill-CoV</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+	<canvas id="canvas"></canvas>
+
+	<div id="time">120</div>
+
+	<div id="infos">
+		<div class="info">TIMER</div>
+		<div class="info">LIFE</div>
+		<div class="info">KILL</div>
+		<div class="info">LOST</div>
+	</div>
+
+	<div id="infosval">
+		<div class="info time">120</div>
+		<div class="info life">100%</div>
+		<div class="info kill">0</div>
+		<div class="info lost">0</div>
+	</div>
+
+	<div id="helicopter">
+		<div id="helicopterrotor"></div>
+		<div id="helicopterfeet1"></div>
+		<div id="helicopterfeet2"></div>
+		<div id="helicopterbody">
+			<div id="helicopterwindow"></div>
+			<div id="cross"></div>
+		</div>
+		<div id="helicoptertail"></div>
+		<div id="helicopterrotorback"></div>
+	</div>
+
+	<div id="commandes">
+		<div class="btn up">UP</div>
+		<div class="btn shoot">SHOOT</div>
+		<div class="btn down">DOWN</div>
+	</div>
+
+	<div id="beginning">
+		<h1>HELICOPTER | CORONAVIRUS</h1>
+		<p>
+			<span style="font-size:1.3em">You have 120 seconds</span> <br><br><br>
+			Kill as many viruses as possible !<br><br>
+			Be careful not to touch the virus !
+		</p>
+		<div class="btnplay" onClick="start()">PLAY</div>
+	</div>
+
+	<div id="finish">
+		<h2>END &nbsp; GAME</h2>
+		<p>
+			<span id="state" style="font-size:1.3em">YOU LOSE IN 65 seconds</span><br><br><br>
+			<span id="cptkill">5</span><br><br>
+			<span id="cptlost">10</span>
+		</p>
+		<div class="btnplay" onClick="retry()">PLAY</div>
+	</div>
+
+	<script type="application/javascript" src="script.js"></script>
+</body>
+
+</html>
